@@ -1,13 +1,13 @@
-# JEO App
+# HaxOfi
 
-Cliente de escritorio de HaxBall hecho para las salas de **JEO**. Es el HaxBall de siempre, pero con extras que la página oficial no tiene.
+Cliente de escritorio de HaxBall hecho para las salas de **OFICINA**. Es el HaxBall de siempre, pero con extras que la página oficial no tiene.
 
 ## Descargas
 
-Andá a la pestaña **[Releases](https://github.com/JuegoEnOficina/JEO-Client/releases)** y bajá la última versión:
+Andá a la pestaña **[Releases](https://github.com/JuegoEnOficina/HaxOfi/releases)** y bajá la última versión:
 
-- **Windows:** `AppJEO.exe` (instalador) o el `.zip`.
-- **Linux:** el archivo `.AppImage`.
+- **Windows:** `AppHaxOfi-<versión>-win.zip` (instalador)
+- **Linux:** el archivo `HaxOfi-<versión>-x86_64.AppImage`.
 
 La app se **actualiza sola** al abrirla. Si querés quedarte en una versión, podés elegirla desde Ajustes → Misc.
 
@@ -18,19 +18,18 @@ La app se **actualiza sola** al abrirla. Si querés quedarte en una versión, po
 - **Invertir arriba/abajo:** da vuelta la vista en vertical si te resulta más cómodo.
 - **Cámara configurable:** seguí al jugador, a la pelota, o a ambos; con zoom y ajustes finos.
 - **Perfiles:** guardá varias identidades (nombre, bandera, auth) y cambiá entre ellas sin reloguear.
-- **Soporte especial para JEO 12MAN:** rotación automática de la cancha hacia tu arco, colores de arco, marcador del modo y otros detalles pensados para 12MAN.
-- **Sonidos, banderas y marcador** con opciones extra.
+- **Camisetas:** creá y guardá tus propias camisetas, o copiá los colores de la sala.
+- **Crear salas:** menú de sala (Cambiá nombre de la sala y cantidad de jugadres con la sala ya creada, mirá la lista de baneados, ponele plugins como powershot, sin necesidad de scripts).
+- **Repeticiones:** mirá replays con marcador, estadísticas (posesión, tiros, pases, toques) y mapa de calor.
+- **Macros:** asigná una tecla a un mensaje de chat (ej: F → "!afk").
+- **Modo streamer:** overlays para transmitir.
+- **Soporte especial para OFICINA 12MAN:** rotación automática de la cancha hacia tu arco, colores de arco, marcador del modo y otros detalles pensados para 12MAN.
+- **Marcador del Mundial 2026**
 
 ## Comunidad
 
-Sumate al Discord de JEO: **https://discord.gg/PFgMHZg82T**
-
-## Próximamente
-
-- Interfaz para cambiar skin en 12MAN JEO
-- Interfaz para crear grupos en Futsal JEO
-- Crear salas custom (Real Soccer, 8MAN, Tenis)
+Sumate al Discord de OFICINA: **https://discord.gg/PFgMHZg82T**
 
 ## ¿Encontraste un problema?
 
-Reportalo en la pestaña **[Issues](https://github.com/JuegoEnOficina/JEO-Client/issues)**. Contá qué pasó, en qué sala y, si podés, una captura.
+Reportalo en la pestaña **[Issues](https://github.com/JuegoEnOficina/HaxOfi/issues)**. Contá qué pasó, en qué sala y, si podés, una captura.
