@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- Chrome Web Store small promo tile, 440x280. Render:
+     google-chrome-stable --headless=new --hide-scrollbars --window-size=440,280 --screenshot=promo-tile.png promo-tile.html -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#05070C;--steel-a:#10151F;--edge:rgba(140,170,220,.16);--text:#EAF0F8;--dim:#7E8CA3;--red:#D81F2A;--blue:#3D7BFF;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;--body:"Open Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{width:440px;height:280px;overflow:hidden}
+body{background:var(--ink);color:var(--text);font-family:var(--body);position:relative}
+.stripe{position:absolute;left:-40px;right:-40px;top:206px;height:6px;background:var(--red);transform:skewY(-4deg)}
+.logo{position:absolute;left:24px;top:18px;height:52px}
+h1{position:absolute;left:28px;top:84px;font-family:var(--display);font-style:italic;font-weight:700;text-transform:uppercase;
+  letter-spacing:.03em;font-size:50px;line-height:.95}
+h1 svg{width:40px;height:40px;vertical-align:-3px;margin-right:6px}
+.row{position:absolute;left:28px;right:28px;top:232px;display:flex;align-items:center;gap:7px;background:var(--steel-a);
+  border:1px solid var(--edge);padding:6px 10px;font-size:13px;font-weight:600}
+.row svg{width:14px;height:14px;flex:none}
+.row span:last-child{margin-left:auto;color:var(--dim)}
+</style>
+</head>
+<body>
+<img class="logo" src="../docs/assets/haxofi-lockup.svg" alt="">
+<h1><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3D7BFF"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Salas<br>verificadas</h1>
+<div class="stripe"></div>
+<div class="row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3D7BFF"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sala de tu comunidad</span><span>Verificada</span></div>
+</body>
+</html>

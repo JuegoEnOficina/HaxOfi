@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "HaxOfi Salas Verificadas",
+  "version": "1.0.0",
+  "description": "Muestra un check azul en las salas de HaxBall verificadas por su comunidad. Las copias que usan su nombre no lo tienen.",
+  "homepage_url": "https://haxofi.com/verificadas/",
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://*.haxball.com/*game.html"],
+      "js": ["verified.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
