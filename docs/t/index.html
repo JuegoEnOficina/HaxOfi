@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ver desde la tribuna</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HaxOfi">
+<meta property="og:title" content="Tribuna de HaxOfi">
+<meta property="og:description" content="El partido en vivo, desde la tribuna de HaxOfi.">
+<meta property="og:image" content="https://haxofi.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#D81F2A">
+<link rel="icon" href="/assets/haxofi-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/link.css">
+<!-- haxofi.com/t/#<id>: opens haxofi://t/<id> in the installed app (/link.js). -->
+</head>
+<body>
+<main data-kind="t" data-id="[A-Za-z0-9_-]{6,24}" data-bad="Este enlace de tribuna no lleva a ningún partido.">
+  <img class="logo" src="/assets/haxofi-lockup.svg" alt="HaxOfi">
+  <h1 id="title">Ver desde la tribuna</h1>
+  <p id="lead">El partido en vivo, desde la tribuna de HaxOfi.</p>
+  <a class="btn" id="open" href="#" hidden>Abrir en HaxOfi</a>
+  <section class="get" id="get" hidden>
+    <h2>¿Todavía no tenés HaxOfi?</h2>
+    <div class="os">
+      <a href="/base/">Windows</a>
+      <a href="/base-linux/">Linux</a>
+      <a href="/base-mac-apple/">Mac</a>
+    </div>
+  </section>
+</main>
+<script src="/link.js"></script>
+</body>
+</html>
