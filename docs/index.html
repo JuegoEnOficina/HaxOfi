@@ -4,6 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HaxOfi · Haxball App</title>
+<script>
+// Base URL in the visitor's language: a saved switcher choice first, else the browser language (pt to /pt/,
+// anything but Spanish to /en/). Crawlers and link previews stay on the Spanish page; hreflang points them on.
+(function () {
+  var path = location.pathname;
+  if (path !== '/' && path !== '/index.html') return;
+  if (/bot|crawl|spider|slurp|preview|discord|whatsapp|telegram|facebookexternalhit|embed/i.test(navigator.userAgent)) return;
+  var lang = null;
+  try { lang = localStorage.getItem('haxofi-lang'); } catch (e) {}
+  if (!lang) {
+    var browserLang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'es').toLowerCase();
+    lang = browserLang.indexOf('pt') === 0 ? 'pt-BR' : browserLang.indexOf('es') === 0 ? 'es' : 'en';
+  }
+  var target = { 'pt-BR': '/pt/', 'en': '/en/' }[lang];
+  if (target) location.replace(target + location.search + location.hash);
+})();
+</script>
+<link rel="canonical" href="https://haxofi.com/">
+<link rel="alternate" hreflang="es" href="https://haxofi.com/">
+<link rel="alternate" hreflang="pt-BR" href="https://haxofi.com/pt/">
+<link rel="alternate" hreflang="en" href="https://haxofi.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://haxofi.com/">
 <meta name="description" content="HaxOfi: Haxball gratis con ranked, Haxman, tienda, estadio con hinchada, clips de cada gol y más. Para Windows, Linux, Mac y Android.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HaxOfi">
@@ -57,6 +79,11 @@ img{max-width:100%;display:block}
 .logo-img{height:38px;width:auto}
 .logo-txt{font-size:24px;letter-spacing:.08em;color:var(--text);margin-left:-2px}
 .top-sp{flex:1}
+.lang{display:flex;gap:4px}
+.lang a{padding:4px 9px;border:1px solid transparent;transform:skewX(var(--skew));text-decoration:none;
+  font-family:var(--display);font-style:italic;font-weight:700;font-size:14px;letter-spacing:.08em;color:var(--dim)}
+.lang a:hover{color:var(--text)}
+.lang a[aria-current]{color:var(--text);border-color:var(--edge-2)}
 
 /* hero */
 .hero{padding:72px 0 30px;text-align:left;position:relative}
@@ -199,6 +226,11 @@ footer .sp{flex:1}
     <img class="logo-img" src="assets/haxofi-icon.svg" alt="">
     <span class="logo-txt disp">HaxOfi</span>
     <div class="top-sp"></div>
+    <nav class="lang" aria-label="Idioma">
+      <a href="/" hreflang="es" lang="es" aria-current="page">ES</a>
+      <a href="/pt/" hreflang="pt-BR" lang="pt-BR">PT</a>
+      <a href="/en/" hreflang="en" lang="en">EN</a>
+    </nav>
   </header>
 
   <section class="hero">
@@ -501,6 +533,13 @@ footer .sp{flex:1}
   explainOnClick('win-notice', ['dl-win']);
   explainOnClick('mac-notice', ['dl-mac-apple', 'dl-mac-intel']);
   explainOnClick('android-notice', ['dl-android']);
+
+  // The switcher choice sticks, so the base URL stops following the browser language.
+  document.querySelectorAll('.lang a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      try { localStorage.setItem('haxofi-lang', link.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
 
   // Discord cards: live icon + member counts from the invite API (same source the app uses).
   document.querySelectorAll('.dc[data-invite]').forEach(function (card) {
